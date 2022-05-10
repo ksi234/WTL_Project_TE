@@ -1,0 +1,33 @@
+*{
+background-color:#D0F9F3;
+}
+
+header{
+	font-size: 25px;
+	font-family: 'Kaushan Script', cursive;	
+	text-align:center;
+}
+
+main{
+	margin-left:120px;
+	
+}
+
+.box{
+	display: block;
+	float: left;
+	width:20%;
+	padding:10px;
+	padding-left:12px;
+}
+
+img{
+	width:100%;
+	border-radius: 5px;
+}
+
+img:hover{
+	transform: scale(2,2);
+	tramsition: 0.3s transform;
+
+}

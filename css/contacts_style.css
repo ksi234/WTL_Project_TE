@@ -1,0 +1,37 @@
+*{
+	background-color:#0EFBC0;
+}
+
+h1{
+	font-size:70px;
+	text-align:center;
+}
+
+
+
+.telephone img{
+	vertical-align:middle;
+}
+
+.telephone span{
+	font-size:50px;
+}
+
+.mobile img{
+	
+	vertical-align:middle;
+}
+
+.mobile span{
+	
+	font-size:50px;
+}
+
+.email img{
+	vertical-align:middle;
+}
+
+.email span{
+	font-size:50px;
+}
+ 

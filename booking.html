@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<title>BOOKING</title>
+<link rel="stylesheet" type="text/css" href="css/booking_style.css">
+
+<script type= "text/javascript">
+
+	function validate()
+	{
+		var name = document.getElementById("uName").value;
+
+		var expName =/^[a-zA-Z\s]+$/;
+		var x = expName.test(name);
+		if(x)
+		{
+ 			document.getElementById("lblName").innerHTML="VALID";
+			document.getElementById("lblName").style.visibility="visible";
+			document.getElementById("lblName").style.color="green";
+ 		}
+		else
+		{
+			document.getElementById("lblName").innerHTML="INVALID";
+			document.getElementById("lblName").style.visibility="visible";
+			document.getElementById("lblName").style.color="red";
+		}
+
+
+
+
+
+		var txtMobile = document.getElementById("uMobile").value;
+	
+		var expMobile = /^[7-9][0-9]{9}$/;
+
+		if(expMobile.test(txtMobile))
+		{
+			document.getElementById("lblMobile").innerHTML="VALID";
+			document.getElementById("lblMobile").style.visibility="visible";
+			document.getElementById("lblMobile").style.color="green";
+
+		}
+		
+		else
+		{
+			document.getElementById("lblMobile").innerHTML="INVALID";
+			document.getElementById("lblMobile").style.visibility="visible";
+			document.getElementById("lblMobile").style.color="red";
+		}
+
+
+		var email = document.getElementById("uEmail").value;
+
+		var expEmail = /^([a-z 0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})$/;
+		var y = expEmail.test(email);
+		if(y)
+		{
+ 			document.getElementById("lblEmail").innerHTML="VALID";
+			document.getElementById("lblEmail").style.visibility="visible";
+			document.getElementById("lblEmail").style.color="green";
+ 		}
+		else
+		{
+			document.getElementById("lblEmail").innerHTML="INVALID";
+			document.getElementById("lblEmail").style.visibility="visible";
+			document.getElementById("lblEmail").style.color="red";
+		}
+
+		
+		var date = document.getElementById("uDate").value;
+
+		var expDate = /^([0-3])([0-9])([./-])([0-1])([0-9])[./-]([0-9]){4}$/;
+		var z = expDate.test(date);
+		if(z)
+		{
+ 			document.getElementById("lblDate").innerHTML="VALID";
+			document.getElementById("lblDate").style.visibility="visible";
+			document.getElementById("lblDate").style.color="green";
+ 		}
+		else
+		{
+			document.getElementById("lblDate").innerHTML="INVALID";
+			document.getElementById("lblDate").style.visibility="visible";
+			document.getElementById("lblDate").style.color="red";
+		}
+
+			
+
+	 	
+		
+	} 
+	
+
+</script>
+</head>
+<body>
+	<div class="booking_form">
+	<form ">
+		<input placeholder="Name" type="text" id="uName"><br>
+		<label id="lblName" style="color:red; visibility:hidden">INVALID</label><br>
+
+		<input placeholder="Mobile Number" type="text" id="uMobile"><br>
+		<label id="lblMobile" style="color:red; visibility:hidden">INVALID</label><br>
+
+		<input placeholder="Email" type="text" id="uEmail"><br>
+		<label id="lblEmail" style="color:red; visibility:hidden">INVALID</label><br>
+		
+		<input placeholder="Enter Date(dd/mm/yyyy)" type="text" id="uDate"><br>
+		<label id="lblDate" style="color:red; visibility:hidden">INVALID</label><br>
+
+		<button  type="button" onclick="validate()">Submit</button>
+	</form>
+	</div>
+</body>
+</html>
